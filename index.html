@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Help by Mahejabeen</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #answer {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📚 Study Help</h1>
+    <p>Made by a Class 8 Student</p>
+
+    <h3>Ask your question 👇</h3>
+    <textarea id="question" placeholder="Type your question here..."></textarea><br><br>
+
+    <button onclick="answerQuestion()">Get Answer</button>
+
+    <div id="answer"></div>
+
+    <script>
+        function answerQuestion() {
+            let q = document.getElementById("question").value;
+
+            if(q === "") {
+                document.getElementById("answer").innerHTML = "Please enter a question!";
+            } else {
+                document.getElementById("answer").innerHTML = 
+                "Good question! Try reading your textbook or ask your teacher 😊";
+            }
+        }
+    </script>
+
+</body>
+</html>
